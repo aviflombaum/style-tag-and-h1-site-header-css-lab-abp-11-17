@@ -53,7 +53,7 @@ RSpec.describe "Styling an <h1> with a <style> tag and Element Selector" do
       css = parser.to_h["all"]
 
       h1_style = css["h1"]
-      font_size = h1_style["font-weight"]
+      font_weight = h1_style["font-weight"]
 
       expect(font_size).to match(/300/i)
     end
@@ -69,11 +69,11 @@ RSpec.describe "Styling an <h1> with a <style> tag and Element Selector" do
       css = parser.to_h["all"]
 
       h1_style = css["h1"]
-      font_size = h1_style["font-family"]
+      font_family = h1_style["font-family"]
 
-      expect(font_size).to match(/Helvetica/i)
-      expect(font_size).to match(/Arial/i)
-      expect(font_size).to match(/sans-serif/i)
+      expect(font_family).to match(/Helvetica/i)
+      expect(font_family).to match(/Arial/i)
+      expect(font_family).to match(/sans-serif/i)
     end
   end
 
